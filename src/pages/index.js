@@ -1,5 +1,8 @@
 import React from "react"
+import Navigation from "../components/Navigation"
 
 export default function Home() {
-  return <div>Hello world!</div>
+  return <div>
+    <Navigation />
+  </div>
 }
