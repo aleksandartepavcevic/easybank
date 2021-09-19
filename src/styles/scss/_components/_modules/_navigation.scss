@@ -1,0 +1,91 @@
+.m-navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $white;
+
+    &.-sticky {
+        .m-navigation {
+            &__content {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        ul {
+            display: none;
+
+            @include media-up(l) {
+                display: flex;
+                align-items: center;
+            }
+
+            li {
+                position: relative;
+                margin: 0 10px;
+                padding: 0 10px;
+                font-family: $font-public-sans;
+                font-weight: 300;
+                color: $grayish-blue;
+                cursor: pointer;
+
+                transition: color .2s ease;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: -23px;
+                    width: 100%;
+                    height: 3px;
+                    border-radius: 5px;
+                    background-color: $tertiary;
+                    background: linear-gradient(to right, $secondary, $tertiary);
+                    transform-origin: center;
+                    transform: scale(0);
+
+                    transition: transform .3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+                }
+
+                &:hover {
+                    color: $primary;
+
+                    &::after {
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+
+        & .a-button.-main {
+            display: none;
+
+            @include media-up(l) {
+                display: block;
+            }
+        }
+
+        & .a-button.-mobile {
+            display: block;
+
+            @include media-up(l) {
+                display: none;
+            }
+        }
+    }
+}
