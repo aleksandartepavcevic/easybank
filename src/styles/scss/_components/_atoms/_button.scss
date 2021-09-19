@@ -15,10 +15,9 @@
         color: $white;
         font-weight: 700;
 
-        transition: transform .3s cubic-bezier(0.68, -0.55, 0.27, 1.55), box-shadow .3s ease;
+        transition: box-shadow .3s ease;
 
         &:hover {
-            transform: scale(1.05);
             box-shadow: 0 5px 10px rgba($primary, .1);
         }
     }

@@ -1,9 +1,12 @@
 .m-header {
+    min-height: 800px;
     height: 100vh;
     padding-top: 80px;
     background-color: $very-light-gray;
+    overflow: hidden;
 
     & ._wr {
+        position: relative;
         display: flex;
         align-items: center;
         height: 100%;
@@ -24,5 +27,22 @@
         & .a-button.-main {
             margin-top: 40px;
         }
+    }
+
+    &__bgPattern {
+        position: absolute;
+        z-index: 1;
+        left: 40%;
+        bottom: 0;
+    }
+
+    &__mockups {
+        position: absolute;
+        z-index: 2;
+        bottom: 50%;
+        right: 100px;
+        transform: translateY(50%);
+        width: 350px;
+        height: 650px;
     }
 }
