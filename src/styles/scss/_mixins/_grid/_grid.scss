@@ -26,8 +26,8 @@
 @mixin make-wrap() {
     display: flex;
     flex-wrap: wrap;
-    margin-right: math.div($grid-gutter-width, 2);
-    margin-left: math.div($grid-gutter-width, 2);
+    margin-right: math.div($grid-gutter-width, -2);
+    margin-left: math.div($grid-gutter-width, -2);
 }
 
 @mixin make-col-ready {

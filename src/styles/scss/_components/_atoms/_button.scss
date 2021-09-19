@@ -1,5 +1,4 @@
 .a-button {
-    padding: 0.65rem 1.5rem;
     font-family: $font-public-sans;
     font-size: 14px;
     cursor: pointer;
@@ -9,6 +8,7 @@
     }
 
     &.-main {
+        padding: 0.65rem 1.5rem;
         border: none;
         border-radius: 50px;
         background: linear-gradient(to right, $secondary, $tertiary);

@@ -1,0 +1,28 @@
+.m-header {
+    height: 100vh;
+    padding-top: 80px;
+    background-color: $very-light-gray;
+
+    & ._wr {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    &__content {
+        h1 {
+            font-weight: 400;
+            color: $primary;
+        }
+
+        p {
+            font-weight: 300;
+            color: $grayish-blue;
+            margin-top: 20px;
+        }
+
+        & .a-button.-main {
+            margin-top: 40px;
+        }
+    }
+}
