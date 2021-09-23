@@ -1,0 +1,16 @@
+.m-about {
+    background-color: $light-grayish-blue;
+    padding: 100px 0;
+
+    &__header {
+        h3 {
+            font-weight: 500;
+            color: $primary;
+        }
+
+        p {
+            margin-top: 20px;
+            color: $grayish-blue;
+        }
+    }
+}

@@ -2,6 +2,8 @@ import gsap from "gsap"
 
 export const headerAnimation = (el1, headerContent, tl) => {
   const mockup = gsap.utils.selector(el1.current.children[0])
+  const mockupLeft = gsap.utils.selector(el1.current.children[1])
+  const mockupRight = gsap.utils.selector(el1.current.children[2])
   const headerEls = gsap.utils.selector(headerContent)
 
   tl.current = gsap
@@ -25,7 +27,7 @@ export const headerAnimation = (el1, headerContent, tl) => {
         opacity: 0,
         duration: 0.8,
       },
-      "-=0.3"
+      "-=0.6"
     )
     .from(mockup("#total-checking"), {
       opacity: 0,
@@ -45,10 +47,26 @@ export const headerAnimation = (el1, headerContent, tl) => {
       opacity: 0,
       y: 100,
     })
-    .to(mockup("#mockup"), {
-      y: 10,
+    .from(mockupLeft("#mockup3"), {
+      opacity: 0,
+      translateX: 200,
+      ease: "ease",
       duration: 1,
-      delay: 1,
+    })
+    .from(
+      mockupRight("#mockup2"),
+      {
+        opacity: 0,
+        translateX: -200,
+        ease: "ease",
+        duration: 1,
+      },
+      "-=1"
+    )
+    .to(mockup("#mockup"), {
+      y: 20,
+      duration: 1,
+      delay: 0.5,
       yoyo: true,
       yoyoEase: "ease-in-out",
       repeat: -1,

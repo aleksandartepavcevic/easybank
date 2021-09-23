@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react"
-import gsap from "gsap"
 import Logo from "../../assets/svg/logo.svg"
 import { Link } from "gatsby"
 import { navAnimation } from "../../lib/animations"
@@ -12,7 +11,7 @@ const Navigation = () => {
 
   useEffect(() => {
     navAnimation(nav, tl)
-  })
+  }, [])
 
   const mobileClickHandler = () => {
     setMenuState(prevState => !prevState)

@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from "react"
 import BgSvg from "../../assets/svg/bg-pattern.svg"
 import Mockup from "../../assets/svg/mockup.svg"
+import MockupLeft from "../../assets/svg/mockup3.svg"
+import MockupRight from "../../assets/svg/mockup2.svg"
 import { headerAnimation } from "../../lib/animations"
 
 const Header = () => {
@@ -26,10 +28,17 @@ const Header = () => {
             <button className="a-button -main">Request Invite</button>
           </div>
 
-          <div ref={el1}>
+          <div
+            className="_l7"
+            style={{ position: "relative", minHeight: 700 }}
+            ref={el1}
+          >
             <Mockup className="m-header__mockups" />
+            <MockupLeft className="m-header__mockups -left" />
+            <MockupRight className="m-header__mockups -right" />
           </div>
-          <BgSvg className="m-header__bgPattern" />
+          <BgSvg className="m-header__bgPattern -left" />
+          <BgSvg className="m-header__bgPattern -right" />
         </div>
       </div>
     </section>
